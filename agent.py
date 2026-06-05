@@ -4,7 +4,6 @@ from typing_extensions import TypedDict, Annotated
 from langchain.messages import SystemMessage
 from langchain.messages import HumanMessage
 from langchain.messages import ToolMessage
-from IPython.display import Image, display
 from langchain.messages import AnyMessage
 from langchain_ollama import ChatOllama
 from langchain.tools import tool
@@ -138,7 +137,6 @@ agent = agent_builder.compile()
 
 # Show the agent flow
 agent.get_graph().draw_mermaid_png(draw_method=MermaidDrawMethod.API, output_file_path='graph_with_tools.png')
-
 
 # Invoke
 messages = [HumanMessage(content="Add 3 and 4 and tell me how are you doing?")]
